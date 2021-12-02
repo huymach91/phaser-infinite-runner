@@ -15,7 +15,7 @@ export default class Game extends Phaser.Scene {
     // load as an atlas
     this.load.atlas(
       'rocket-mouse',
-      'assets/rocket-mouse.png',
+      'https://raw.githubusercontent.com/huymach91/phaser-infinite-runner/master/assets/rocket-mouse.png',
       'assets/rocket-mouse.json'
     );
   }
