@@ -5,9 +5,7 @@ export default class Game extends Phaser.Scene {
     super('game');
   }
 
-  preload() {
-    this.load;
-  }
+  preload() {}
 
   create() {}
 }

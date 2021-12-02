@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "typeRoots": ["node_modules/@develephant/types-phaser"]
-  }
+    "typeRoots": ["defs/*.d.ts"]
+  },
+  "include": ["defs/*.d.ts"]
 }
