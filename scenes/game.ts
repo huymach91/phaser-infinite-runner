@@ -6,10 +6,17 @@ export default class Game extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('background', '../assets/bg_repeat_340x640.png');
+    this.load.image(
+      'background',
+      'https://cdn.jsdelivr.net/gh/huymach91/infinite-runner@master/assets/bg_repeat_340x640.png'
+    );
+    this.load.spritesheet('player', '');
   }
 
   create() {
-    this.add.image(0, 0, 'background').setOrigin(0, 0);
+    const width = this.scale.width;
+    const height = this.scale.height;
+
+    this.add.tileSprite(0, 0, width, height, 'background').setOrigin(0, 0);
   }
 }
