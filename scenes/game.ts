@@ -12,9 +12,11 @@ export default class Game extends Phaser.Scene {
       'background',
       'https://cdn.jsdelivr.net/gh/huymach91/infinite-runner@master/assets/bg_repeat_340x640.png'
     );
+    // load as an atlas
     this.load.atlas(
-      'player',
-      'https://raw.githubusercontent.com/huymach91/phaser-infinite-runner/master/assets/rocketmouse_run01.png'
+      'rocket-mouse',
+      'assets/rocket-mouse.png',
+      'assets/rocket-mouse.json'
     );
   }
 
