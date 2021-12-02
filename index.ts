@@ -1,6 +1,4 @@
 import Phaser from 'phaser';
-// we can delete this line
-// import HelloWorldScene from './scenes/HelloWorldScene// add this line to import Game
 import Game from './scenes/game';
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
