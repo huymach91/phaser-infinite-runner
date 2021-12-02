@@ -6,7 +6,7 @@ export default class Game extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('background', 'house/bg_repeat_340x640.png');
+    this.load;
   }
 
   create() {}

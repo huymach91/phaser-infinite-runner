@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@develephant/types-phaser": "^1.0.1",
     "phaser": "^3.55.2"
   }
 }
