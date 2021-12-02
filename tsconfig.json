@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "typeRoots": ["defs/*.d.ts"]
+    "target": "es6",
   },
-  "include": ["defs/*.d.ts"]
+  "baseUrl": "./"
 }
