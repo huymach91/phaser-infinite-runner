@@ -16,7 +16,7 @@ export default class Game extends Phaser.Scene {
     this.load.atlas(
       'rocket-mouse',
       'https://raw.githubusercontent.com/huymach91/phaser-infinite-runner/master/assets/rocket-mouse.png',
-      'assets/rocket-mouse.json'
+      'https://github.com/huymach91/phaser-infinite-runner/blob/master/assets/rocket-mouse.json'
     );
   }
 
@@ -25,5 +25,12 @@ export default class Game extends Phaser.Scene {
     const height = this.scale.height;
 
     this.add.tileSprite(0, 0, width, height, 'background').setOrigin(0, 0);
+
+    this.add.sprite(
+      width * 0.5, // middle of screen
+      height * 0.5,
+      'rocket-mouse',
+      'rocketmouse_fly01.png'
+    );
   }
 }
