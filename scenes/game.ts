@@ -10,7 +10,7 @@ export default class Game extends Phaser.Scene {
   preload() {
     this.load.image(
       'background',
-      'https://cdn.jsdelivr.net/gh/huymach91/infinite-runner@master/assets/bg_repeat_340x640.png'
+      'https://raw.githubusercontent.com/huymach91/phaser-infinite-runner/master/assets/bg_repeat.png'
     );
     // load as an atlas
     this.load.atlas(
