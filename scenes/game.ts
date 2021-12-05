@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { RocketMouseData } from './rocket-mouse-data';
 
 export default class Game extends Phaser.Scene {
   private player: any;
@@ -16,7 +17,7 @@ export default class Game extends Phaser.Scene {
     this.load.atlas(
       'rocket-mouse',
       'https://raw.githubusercontent.com/huymach91/phaser-infinite-runner/master/assets/rocket-mouse.png',
-      'https://github.com/huymach91/phaser-infinite-runner/blob/master/assets/rocket-mouse.json'
+      RocketMouseData
     );
   }
 
@@ -26,12 +27,13 @@ export default class Game extends Phaser.Scene {
 
     this.add.tileSprite(0, 0, width, height, 'background').setOrigin(0, 0);
 
-    this.player = this.add.sprite(
+    this.player = this.physics.add.sprite(
       width * 0.5,
       height * 0.5,
       'rocket-mouse',
       'rocketmouse_fly01.png'
     );
+    this.player.body.setCollideWorldBounds(true);
 
     this.anims.create({
       key: 'rocket-mouse-run',
@@ -47,5 +49,7 @@ export default class Game extends Phaser.Scene {
     });
 
     this.player.play('rocket-mouse-run');
+
+    this.physics.world.setBounds(0, 0, Number.MAX_SAFE_INTEGER, height - 30);
   }
 }
